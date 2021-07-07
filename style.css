@@ -121,6 +121,10 @@ section {
   padding: 50px;
 }
 
+.about-details .about-h2 {
+  color: crimson;
+}
+
 .image-cover {
   width: 200px;
   height: 200px;
