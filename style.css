@@ -51,6 +51,10 @@ section {
   z-index: 1000;
 
   top: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Style the links inside the navigation bar */
