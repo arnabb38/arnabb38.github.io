@@ -317,6 +317,51 @@ section {
   color: green;
 }
 
+@media (max-width: 767.98px) {
+  .timeline::after {
+    left: 90px;
+  }
+
+  .containerr {
+    width: 100%;
+    padding-left: 120px;
+    padding-right: 30px;
+  }
+
+  .containerr.right {
+    left: 0%;
+  }
+
+  .containerr.left::after, 
+  .containerr.right::after {
+    left: 82px;
+  }
+
+  .containerr.left::before,
+  .containerr.right::before {
+    left: 100px;
+    border-color: transparent #006E51 transparent transparent;
+  }
+
+  .containerr.left .date,
+  .containerr.right .date {
+    right: auto;
+    left: 15px;
+  }
+
+  .containerr.left .icon,
+  .containerr.right .icon {
+    right: auto;
+    left: 146px;
+  }
+
+  .containerr.left .content,
+  .containerr.right .content {
+    padding: 30px 30px 30px 90px;
+    border-radius: 500px 0 0 500px;
+  }
+}
+
 /* ---------------------------- */
 .project-table {
   /* border: 1px dashed green; */
