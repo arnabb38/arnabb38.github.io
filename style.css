@@ -293,6 +293,11 @@ section {
   border-radius: 0 500px 500px 0;
 }
 
+.containerr .content h2 a{
+  color: green;
+  /* text-decoration: none; */
+}
+
 .containerr.right .content {
   padding: 30px 30px 30px 90px;
   border-radius: 500px 0 0 500px;
