@@ -157,6 +157,9 @@ section {
 }
 
 /* ------------------------- */
+.competency-list-container{
+  text-align: center;
+}
 .competency-list {
   font-size: 40px;
   padding: 30px;
@@ -381,6 +384,10 @@ section {
 .contact-table th {
   /* border: 1px dashed green; */
   padding: 20px;
+}
+
+.contact-table a {
+  color: green;
 }
 
 /* --------------------------- */
