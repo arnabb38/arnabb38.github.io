@@ -1,0 +1,45 @@
+.services-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* padding: 20px; */
+  color: #333;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* Adjust number of columns as needed */
+  gap: 20px;
+  justify-content: center;
+}
+
+.service-card {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.service-card i {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.service-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.service-card p {
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr; /* Adjust number of columns for smaller screens */
+  }
+}
