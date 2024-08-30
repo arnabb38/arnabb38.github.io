@@ -1,34 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore Arnab</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
 
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-
-<body>
-    <!-- Header and Footer are inserted by JS -->
-    <div class="wrapper">
-        <div class="index-background">
-            <div id="typing-container" class="typing-container"></div>
+  <body>
+    <header class="fixed-header">
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index.html"> {{arnab.basak}} </a>
         </div>
-        <!-- <div class="social-icons">
-            <a href="https://github.com/your-username" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/your-username" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://twitter.com/your-username" target="_blank"><i class="fab fa-twitter"></i></a>
-        </div> -->
+        <ul class="nav-links">
+          <!-- <li><a href="index.html">Home</a></li> -->
+          <li><a href="about.html">Explore Arnab</a></li>
+        </ul>
+      </nav>
+      <div class="breadcrumb">
+        <div class="br-header">
+          <div class="logo">
+            <a href="index.html"> {{arnab.basak}} </a>
+          </div>
+          <div class="nav-links">
+            <!-- <li><a href="index.html">Home</a></li> -->
+            <li><a href="about.html">Explore Arnab</a></li>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="wrapper">
+      <div class="index-background">
+        <div id="typing-container" class="typing-container"></div>
+        <br />
+        <div class="social-icons">
+          <a href="https://github.com/arnabb38" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="https://linkedin.com/in/arnab-basak" target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="mailto:arnabbasak896@gmail.com" target="_blank"
+            ><i class="fa-regular fa-envelope-open"></i
+          ></a>
+          <a href="https://gitlab.com/arnab.basak" target="_blank"
+            ><i class="fab fa-gitlab"></i
+          ></a>
+        </div>
+        <a
+          href="https://drive.google.com/file/d/1gOSzCw3dmn8orqheT53Cp7vYe4sdJ2gO/view?usp=drive_link"
+          target="_blank"
+          download
+          class="download-resume"
+          >Download Resume</a
+        >
+      </div>
     </div>
 
     <script src="js/scripts.js"></script>
-</body>
-
+  </body>
 </html>
