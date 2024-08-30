@@ -1,0 +1,197 @@
+.ubuntu-mono-regular {
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ubuntu-mono-bold {
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.ubuntu-mono-regular-italic {
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.ubuntu-mono-bold-italic {
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 700;
+  font-style: italic;
+}
+
+body {
+  font-family: "Ubuntu Mono";
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.index-background {
+  background-image: url("/images/hero-index.jpg");
+  background-size: cover, 40px 40px; /* Ensure the image covers the full area */
+  background-position: center; /* Center the image */
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+p {
+  font-weight: 400;
+}
+
+header,
+footer {
+  background-color: #333;
+  color: #f4f4f4 !important;
+  padding: 10px 20px;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #f4f4f4;
+}
+
+nav ul li a {
+  color: #f4f4f4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #0077b5;
+}
+
+.wrapper {
+  /* max-width: 500px; Adjust the width as needed */
+  margin: 0 auto;
+  /* padding: 0 20px; */
+}
+
+main {
+  padding: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: #f4f4f4;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* social icons */
+
+/* .social-icons {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  color: #f4f4f4;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+.social-icons a:hover {
+  color: #0077b5; 
+} */
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 2rem;
+  margin: 0 15px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ccc; /* Adjust hover color as needed */
+}
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+  .typing-container {
+    margin-top: 50px;
+  }
+
+  .social-icons a {
+    font-size: 1.5rem;
+    margin: 0 10px;
+  }
+}
+
+/* typing css */
+
+.typing-container {
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+  margin-top: 100px;
+}
+
+.typing-text {
+  font-size: 2em;
+  color: #f4f4f4;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  animation: blink 0.75s step-end infinite;
+  display: inline-block;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
