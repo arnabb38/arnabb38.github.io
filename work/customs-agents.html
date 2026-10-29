@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Customs Agent Management System · Arnab Basak</title>
+  <meta name="description" content="Case study: a single licence register and lifecycle for customs agents across 19 customs offices, built for Bangladesh's National Board of Revenue.">
+  <meta property="og:title" content="Customs Agent Management System · Arnab Basak">
+  <meta property="og:description" content="Case study: a single licence register and lifecycle for customs agents across 19 customs offices, built for Bangladesh's National Board of Revenue.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://arnabb38.github.io/work/customs-agents.html">
+  <link rel="canonical" href="https://arnabb38.github.io/work/customs-agents.html">
+  <script>try{var t=localStorage.getItem("theme")}catch(e){}document.documentElement.setAttribute("data-theme",t||"dark");</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+Condensed:wght@600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="arrowhead"/></marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="arrowhead teal"/></marker>
+  </defs>
+</svg>
+<div class="cs-top">
+  <a class="home" href="../index.html#work">Arnab Basak</a>
+  <button class="theme" type="button" data-theme-toggle>Light theme</button>
+</div>
+<main class="cs" id="main">
+  <header>
+    <p class="client">National Board of Revenue · 2023 to 2024</p>
+    <h1>Customs Agent Management System</h1>
+    <p class="lede">One national register for customs agent licences in Bangladesh: C&amp;F agents, freight forwarders and shipping agents, their owners and representatives, from application to cancellation.</p>
+  </header>
+  <dl class="facts"><div><dt>Client</dt><dd>National Board of Revenue</dd></div><div><dt>My role</dt><dd>End-to-end delivery lead</dd></div><div><dt>Scale</dt><dd>300,000+ customs agents, 19 customs offices</dd></div><div><dt>Stack</dt><dd>Node.js, Hapi, Angular, PostgreSQL, JasperReports; ASYCUDA World</dd></div></dl>
+  <div class="cs-body">
+    <section>
+      <h2>The problem</h2>
+      <p>Customs agent licences were handled separately by each custom house and commissionerate, largely on paper. Nobody had a single view of who held a valid licence, who the owners and representatives behind it were, or which cases were open against an agent, and the clearance system could not see licence status directly.</p>
+    </section>
+    <section class="wide">
+      <h2>The licence lifecycle</h2>
+      <p>We modelled every state a licence can be in, and who can move it from one state to the next, then built the system around that model.</p>
+      <figure class="dia">
+      <div class="dia__frame">
+        <svg viewBox="0 0 1010 300" role="img" aria-label="State diagram of the customs agent licence lifecycle"><text class="t-head" x="30" y="30">Application</text><text class="t-head" x="420" y="30">Licence</text><rect class="task" x="30" y="60" width="120" height="54" rx="8"/><text text-anchor="middle"><tspan x="90.0" y="91.0">Draft</tspan></text><rect class="task" x="200" y="60" width="140" height="54" rx="8"/><text text-anchor="middle"><tspan x="270.0" y="91.0">Submitted</tspan></text><rect class="task hot" x="420" y="60" width="140" height="54" rx="8"/><text text-anchor="middle"><tspan x="490.0" y="91.0">Active</tspan></text><rect class="task" x="650" y="60" width="130" height="54" rx="8"/><text text-anchor="middle"><tspan x="715.0" y="91.0">Suspended</tspan></text><rect class="task" x="860" y="60" width="130" height="54" rx="8"/><text text-anchor="middle"><tspan x="925.0" y="91.0">Cancelled</tspan></text><path class="flow" d="M150,87 H200"/><text class="t-faint" x="175" y="80" text-anchor="middle">submit</text><path class="flow hot" d="M340,87 H420"/><text class="t-faint" x="380" y="80" text-anchor="middle">approve</text><path class="flow" d="M560,87 H650"/><rect class="task" x="130" y="200" width="120" height="46" rx="8"/><text text-anchor="middle"><tspan x="190.0" y="227.0">Reverted</tspan></text><rect class="task" x="300" y="200" width="120" height="46" rx="8"/><text text-anchor="middle"><tspan x="360.0" y="227.0">Rejected</tspan></text><path class="flow" d="M240,114 L205,200"/><path class="flow alt" d="M130,223 H90 V114"/><text class="t-faint" x="84" y="160" text-anchor="end">edit and</text><text class="t-faint" x="84" y="176" text-anchor="end">resubmit</text><path class="flow" d="M300,114 L350,200"/><rect class="task" x="430" y="200" width="120" height="46" rx="8"/><text text-anchor="middle"><tspan x="490.0" y="227.0">Amendment</tspan></text><path class="flow" d="M465,114 V200"/><path class="flow alt" d="M515,200 V114"/><text class="t-faint" x="490" y="268" text-anchor="middle">approved changes</text><text class="t-faint" x="490" y="284" text-anchor="middle">keep it active</text><path class="flow alt" d="M715,60 V36 H490 V60"/><text class="t-faint" x="602" y="30" text-anchor="middle">reactivated</text><path class="flow" d="M545,114 V160 H925 V114"/><text class="t-faint" x="740" y="152" text-anchor="middle">cancelled</text><path class="flow alt" d="M925,60 V14 H530 V60" /><text class="t-faint" x="760" y="10" text-anchor="middle">reactivated within licence validity</text><text class="t-faint" x="925" y="190" text-anchor="middle">cascades to owners,</text><text class="t-faint" x="925" y="206" text-anchor="middle">representatives and</text><text class="t-faint" x="925" y="222" text-anchor="middle">reference licences</text></svg>
+      </div>
+      <figcaption>The licence lifecycle as a state flow. An Initiator at a customs office drafts and submits; an Approver approves, sends it back or rejects it. Every status change records a reason and an effective date, and the agent is notified by SMS.</figcaption>
+    </figure>
+    </section>
+    <section>
+      <h2>What the system covers</h2>
+      <ul>
+        <li><strong>Licensing:</strong> applications with documents for three agent types and three licence types (general, reference and self-clearance), a two-level approval, amendments, and suspension, cancellation and reactivation.</li>
+        <li><strong>People:</strong> owners and representatives (customs and jetty sarkars) linked to each licence, with their own status and printable ID cards.</li>
+        <li><strong>Integration:</strong> connected to ASYCUDA World, the customs clearance system, and to an external SMS gateway that notifies agents as their applications and licences change status.</li>
+        <li><strong>Verification:</strong> business identification numbers checked against the NBR VAT system, plus an agent portal for linking customs and VAT registrations, reviewed in three steps.</li>
+        <li><strong>Enforcement:</strong> cases and show-cause notices tracked from the custom house through to the courts.</li>
+        <li><strong>Oversight:</strong> dashboards for each office and across all 19 offices, and agent, owner, representative and verification reports.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>My part</h2>
+      <ul>
+        <li>Led delivery end to end: requirements with the National Board of Revenue, design, build and rollout across custom houses and commissionerates.</li>
+        <li>Designed the role model (initiator, approver, operations manager, office admin, super admin) so each office runs its own approvals while headquarters sees everything.</li>
+        <li>Migrated the legacy C&amp;F agent records into the new register.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>How we delivered</h2>
+      <p>About 1,100 commits across the API and web app over nearly two years. GitLab CI deployed every change to a development environment automatically, and production releases were a deliberate, manual step. The web app is an installable progressive web app, and licences, ID cards and reports are generated from report templates in a separate service.</p>
+    </section>
+    <section class="wide">
+      <h2>Outcomes</h2>
+      <dl class="outcomes"><div><dt>300k+</dt><dd>customs agents on one register</dd></div><div><dt>19</dt><dd>custom houses and commissionerates</dd></div><div><dt>90%</dt><dd>less manual processing time</dd></div></dl>
+    </section>
+  </div>
+  <nav class="next" aria-label="More case studies">
+    <a href="agent-licensing.html">Previous: Agent Licensing Online</a>
+    <a href="universe-billing.html">Next: UniVerge ICX billing</a>
+  </nav>
+</main>
+<script src="../assets/site.js"></script>
+</body>
+</html>

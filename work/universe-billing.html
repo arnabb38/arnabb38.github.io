@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UniVerge ICX billing · Arnab Basak</title>
+  <meta name="description" content="Case study: rebuilding a telecom interconnect billing system, its call-record pipeline and a new web app and API, invoicing, re-rating and regulator reporting, and running it under a maintenance contract.">
+  <meta property="og:title" content="UniVerge ICX billing · Arnab Basak">
+  <meta property="og:description" content="Case study: rebuilding a telecom interconnect billing system, its call-record pipeline and a new web app and API, invoicing, re-rating and regulator reporting, and running it under a maintenance contract.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://arnabb38.github.io/work/universe-billing.html">
+  <link rel="canonical" href="https://arnabb38.github.io/work/universe-billing.html">
+  <script>try{var t=localStorage.getItem("theme")}catch(e){}document.documentElement.setAttribute("data-theme",t||"dark");</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+Condensed:wght@600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="arrowhead"/></marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="arrowhead teal"/></marker>
+  </defs>
+</svg>
+<div class="cs-top">
+  <a class="home" href="../index.html#work">Arnab Basak</a>
+  <button class="theme" type="button" data-theme-toggle>Light theme</button>
+</div>
+<main class="cs" id="main">
+  <header>
+    <p class="client">Telecom interconnect exchange · 2023 to present</p>
+    <h1>UniVerge ICX billing</h1>
+    <p class="lede">Rebuilding a telecom interconnect billing system: the call-record pipeline on a legacy Java River framework, plus a new web application and API, now kept running 24/7 under an annual maintenance contract with a team I lead.</p>
+  </header>
+  <dl class="facts"><div><dt>Domain</dt><dd>Telecom interconnect billing</dd></div><div><dt>My role</dt><dd>Rebuild lead, now sustain lead</dd></div><div><dt>Scale</dt><dd>985 files a cycle, 3.5 GB of records a day</dd></div><div><dt>Stack</dt><dd>Java, River framework, Node.js, Angular 16, Oracle, ZooKeeper</dd></div></dl>
+  <div class="cs-body">
+    <section>
+      <h2>The problem</h2>
+      <p>Interconnect billing settles what operators owe each other for calls that cross their networks, so a lost or double-counted record turns directly into a billing dispute. The pipeline ran on a legacy Java River framework, and the application around it was an ageing Struts and JSP web app on Tomcat 7: hard to change, hard to see into, and tied to old switch formats.</p>
+    </section>
+    <section class="wide">
+      <h2>The pipeline</h2>
+      <figure class="dia">
+      <div class="dia__frame">
+        <svg viewBox="0 0 1000 330" role="img" aria-label="Pipeline diagram of the ICX billing system"><rect class="task ext" x="20" y="70" width="140" height="56" rx="8"/><text text-anchor="middle"><tspan x="90.0" y="94.0">Switch session</tspan><tspan x="90.0" y="110.0">records (FTP)</tspan></text><rect class="task" x="182" y="70" width="140" height="56" rx="8"/><text text-anchor="middle"><tspan x="252.0" y="94.0">Pull and</tspan><tspan x="252.0" y="110.0">stage files</tspan></text><path class="flow" d="M160,98 H182"/><rect class="task hot" x="344" y="70" width="140" height="56" rx="8"/><text text-anchor="middle"><tspan x="414.0" y="94.0">Validate,</tspan><tspan x="414.0" y="110.0">find gaps</tspan></text><text class="t-amber" x="414" y="54" text-anchor="middle">name, size, sequence</text><path class="flow" d="M322,98 H344"/><rect class="task hot" x="506" y="70" width="140" height="56" rx="8"/><text text-anchor="middle"><tspan x="576.0" y="94.0">Parse and rate</tspan><tspan x="576.0" y="110.0">by traffic type</tspan></text><text class="t-amber" x="576" y="54" text-anchor="middle">ICX, IGW, ANS, IOS</text><path class="flow hot" d="M484,98 H506"/><rect class="task" x="668" y="70" width="140" height="56" rx="8"/><text text-anchor="middle"><tspan x="738.0" y="94.0">Oracle store</tspan><tspan x="738.0" y="110.0">and CSV</tspan></text><path class="flow hot" d="M646,98 H668"/><rect class="task" x="830" y="70" width="140" height="56" rx="8"/><text text-anchor="middle"><tspan x="900.0" y="94.0">Invoices and</tspan><tspan x="900.0" y="110.0">reports</tspan></text><text class="t-amber" x="900" y="54" text-anchor="middle">3 invoice types</text><path class="flow" d="M808,98 H830"/><rect class="task ext" x="182" y="180" width="140" height="46" rx="8"/><text text-anchor="middle"><tspan x="252.0" y="207.0">Regulator feed</tspan></text><path class="flow" d="M252,126 V180"/><rect class="task" x="506" y="180" width="140" height="46" rx="8"/><text text-anchor="middle"><tspan x="576.0" y="207.0">Re-rating</tspan></text><path class="flow" style="marker-start:url(#arrow)" d="M576,126 V180"/><rect class="task ext" x="182" y="262" width="300" height="48" rx="8"/><text x="332" y="291" text-anchor="middle">Coordination: ZooKeeper</text><rect class="task ext" x="506" y="262" width="464" height="48" rx="8"/><text x="738" y="291" text-anchor="middle">Live statistics and control (JMX), watchdog restarts</text></svg>
+      </div>
+      <figcaption>The billing pipeline. Session records arrive from the switch, are validated for gaps in the file sequence, rated by traffic type and turned into invoices and regulator reports. Operators can watch, pause and re-rate from the web app.</figcaption>
+    </figure>
+    </section>
+    <section>
+      <h2>What we changed</h2>
+      <ul>
+        <li><strong>A new application layer:</strong> an Angular 16 web app on a reusable component library and a Node.js API, replacing the legacy web app.</li>
+        <li><strong>Billing operations:</strong> domestic, international incoming and international outgoing invoices with an approval step, scheduling and regeneration, plus re-rating for disputed or failed records.</li>
+        <li><strong>Reporting:</strong> regulator reports, call volume by partner and route, completion ratios and dashboards for incoming and outgoing traffic.</li>
+        <li><strong>Operability:</strong> live statistics and pause, resume and reload controls from the browser, and a watchdog that restarts the engine on known failure patterns.</li>
+        <li><strong>The pipeline:</strong> rebuilt call-record processing on the River framework to parse 985 files a cycle, each carrying 30,000+ session records of 390 fields, about 3.5 GB a day, including a new switch’s record format and country-wise pulse rating.</li>
+        <li><strong>The hardware:</strong> specified and configured the high-availability servers it runs on: 96 cores, 256 GB of RAM and 18 TB of SSD storage.</li>
+        <li><strong>One codebase, two operators:</strong> client profiles let the same build serve two interconnect operators.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>What running it taught me</h2>
+      <p>A sustain contract is a product with a different shape: fewer features, more attention to database growth, capacity and the next change request. A small team that clearly owns the system keeps it boring, which is the goal for billing.</p>
+    </section>
+    <section class="wide">
+      <h2>Outcomes</h2>
+      <dl class="outcomes"><div><dt>985</dt><dd>files parsed per cycle</dd></div><div><dt>3.5 GB</dt><dd>of call records a day</dd></div><div><dt>30k+</dt><dd>session records per file</dd></div><div><dt>3</dt><dd>invoice types with approval</dd></div><div><dt>2</dt><dd>operators on one codebase</dd></div><div><dt>24/7</dt><dd>operation, now under AMC</dd></div></dl>
+    </section>
+  </div>
+  <nav class="next" aria-label="More case studies">
+    <a href="customs-agents.html">Previous: Customs Agent Management</a>
+    <a href="internet-banking.html">Next: Digital banking platform</a>
+  </nav>
+</main>
+<script src="../assets/site.js"></script>
+</body>
+</html>

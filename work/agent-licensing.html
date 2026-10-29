@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agent Licensing Online · Arnab Basak</title>
+  <meta name="description" content="Case study: the national insurance agent recruitment, training and licensing platform for IDRA. Licence approval cut from 14 days to 24 hours.">
+  <meta property="og:title" content="Agent Licensing Online · Arnab Basak">
+  <meta property="og:description" content="Case study: the national insurance agent recruitment, training and licensing platform for IDRA. Licence approval cut from 14 days to 24 hours.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://arnabb38.github.io/work/agent-licensing.html">
+  <link rel="canonical" href="https://arnabb38.github.io/work/agent-licensing.html">
+  <script>try{var t=localStorage.getItem("theme")}catch(e){}document.documentElement.setAttribute("data-theme",t||"dark");</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+Condensed:wght@600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="arrowhead"/></marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="arrowhead teal"/></marker>
+  </defs>
+</svg>
+<div class="cs-top">
+  <a class="home" href="../index.html#work">Arnab Basak</a>
+  <button class="theme" type="button" data-theme-toggle>Light theme</button>
+</div>
+<main class="cs" id="main">
+  <header>
+    <p class="client">Insurance Development and Regulatory Authority · 2021 to 2026</p>
+    <h1>Agent Licensing Online</h1>
+    <p class="lede">The national platform that recruits, trains and licenses insurance agents in Bangladesh, built to the 2021 agent regulations and run until the contract completed in June 2026.</p>
+  </header>
+  <dl class="facts"><div><dt>Client</dt><dd>IDRA, the insurance regulator</dd></div><div><dt>My role</dt><dd>Requirements, architecture and delivery lead</dd></div><div><dt>Scale</dt><dd>800,000+ agents, 83 insurers, 8 training institutes</dd></div><div><dt>Stack</dt><dd>Node.js, Angular, PostgreSQL, Spring Batch, JasperReports</dd></div></dl>
+  <div class="cs-body">
+    <section>
+      <h2>The problem</h2>
+      <p>The Insurance Agent (Recruitment, Registration and Licence) Regulations 2021 set out how agents must be recruited, trained and licensed. In practice the work was slow and paper-heavy, split between the regulator, dozens of insurance companies and the training institutes. A licence took about two weeks.</p>
+    </section>
+    <section class="wide">
+      <h2>The process we put online</h2>
+      <p>Four parties, one flow, separate tracks for life and non-life insurers. Each step has a single owner and the platform enforces the regulation, so the regulator reviews complete batches instead of chasing missing papers.</p>
+      <figure class="dia">
+      <div class="dia__frame">
+        <svg viewBox="0 0 1300 372" role="img" aria-label="BPMN diagram of the insurance agent licence process"><rect class="lane" x="10" y="10" width="1280" height="88"/><rect class="lane-head" x="10" y="10" width="128" height="88"/><text class="t-lane" text-anchor="middle"><tspan x="74.0" y="50.0">Candidate</tspan><tspan x="74.0" y="66.0">agent</tspan></text><rect class="lane" x="10" y="98" width="1280" height="88"/><rect class="lane-head" x="10" y="98" width="128" height="88"/><text class="t-lane" text-anchor="middle"><tspan x="74.0" y="138.0">Insurance</tspan><tspan x="74.0" y="154.0">company</tspan></text><rect class="lane" x="10" y="186" width="1280" height="88"/><rect class="lane-head" x="10" y="186" width="128" height="88"/><text class="t-lane" text-anchor="middle"><tspan x="74.0" y="226.0">Training</tspan><tspan x="74.0" y="242.0">institute</tspan></text><rect class="lane" x="10" y="274" width="1280" height="88"/><rect class="lane-head" x="10" y="274" width="128" height="88"/><text class="t-lane" text-anchor="middle"><tspan x="74.0" y="322.0">IDRA</tspan></text><circle class="ev" cx="170" cy="142" r="14"/><rect class="task" x="210" y="117" width="130" height="50" rx="8"/><text text-anchor="middle"><tspan x="275.0" y="138.0">Issue access</tspan><tspan x="275.0" y="154.0">number</tspan></text><path class="flow" d="M184,142 H210"/><rect class="task" x="380" y="29" width="130" height="50" rx="8"/><text text-anchor="middle"><tspan x="445.0" y="50.0">Submit Form-1</tspan><tspan x="445.0" y="66.0">online</tspan></text><path class="flow" d="M340,142 H445 V79"/><rect class="task" x="550" y="117" width="130" height="50" rx="8"/><text text-anchor="middle"><tspan x="615.0" y="138.0">Review and</tspan><tspan x="615.0" y="154.0">appoint agent</tspan></text><path class="flow" d="M510,54 H615 V117"/><rect class="task" x="550" y="205" width="130" height="50" rx="8"/><text text-anchor="middle"><tspan x="615.0" y="226.0">Training and</tspan><tspan x="615.0" y="242.0">certificate</tspan></text><path class="flow" d="M615,167 V205"/><rect class="task hot" x="730" y="117" width="140" height="50" rx="8"/><text text-anchor="middle"><tspan x="800.0" y="138.0">Form-3 batch</tspan><tspan x="800.0" y="154.0">to IDRA</tspan></text><path class="flow" d="M680,230 H705 V142 H730"/><rect class="task" x="860" y="293" width="110" height="50" rx="8"/><text text-anchor="middle"><tspan x="915.0" y="322.0">Review</tspan></text><path class="flow hot" d="M870,142 H915 V293"/><path class="gw" d="M1015,296 L1037,318 L1015,340 L993,318 z"/><text class="t-amber" x="1015" y="323" text-anchor="middle">?</text><text class="t-soft" x="1015" y="358" text-anchor="middle">accepted?</text><path class="flow" d="M970,318 H993"/><path class="flow alt" d="M1015,296 V230 H800 V167"/><text class="t-faint" x="815" y="222">rejected: fix and resubmit</text><rect class="task" x="1060" y="293" width="90" height="50" rx="8"/><text text-anchor="middle"><tspan x="1105.0" y="322.0">Verify</tspan></text><path class="flow" d="M1037,318 H1060"/><rect class="task hot" x="1170" y="293" width="110" height="50" rx="8"/><text text-anchor="middle"><tspan x="1225.0" y="314.0">Approve,</tspan><tspan x="1225.0" y="330.0">licence no.</tspan></text><path class="flow" d="M1150,318 H1170"/><circle class="ev end" cx="1225" cy="54" r="14"/><path class="flow hot" d="M1225,293 V68"/><text class="t-faint" x="1203" y="59" text-anchor="end">licence issued</text></svg>
+      </div>
+      <figcaption>A new agent licence as BPMN. IDRA works in batches: one officer reviews, another verifies, a third approves. Renewals (Form-5) follow the same IDRA path, with late fees calculated under the regulation.</figcaption>
+    </figure>
+    </section>
+    <section>
+      <h2>What the platform covers</h2>
+      <ul>
+        <li><strong>Recruitment:</strong> insurers issue time-limited access numbers by SMS, candidates apply online, and approval generates the agent code and appointment letter.</li>
+        <li><strong>Training:</strong> institutes run batches and issue certificates, which the licence application then picks up.</li>
+        <li><strong>Licensing and renewal:</strong> Form-3 and Form-5 applications in batches, a three-step review at IDRA, generated licences, and a late-fee calculator that follows the regulation.</li>
+        <li><strong>Agent register:</strong> the national licensed-agent register, agent history, release letters for agents moving between insurers, and NID verification with the Election Commission.</li>
+        <li><strong>Reporting:</strong> summaries by company and training status, eKYC results, and policies sold per agent, shared with the regulator’s policy information system.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>My part</h2>
+      <ul>
+        <li>Turned the regulation into requirements and acceptance criteria with IDRA, and owned that relationship from first build to completion.</li>
+        <li>Led the architecture and delivery: a bilingual Bangla and English web app, an API, a report service for licences and certificates, and an SMS service with per-insurer sender names.</li>
+        <li>Coordinated the rollout across insurance companies and training institutes, each with different levels of digital readiness.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>How we delivered</h2>
+      <p>Five years of steady releases, with nearly 4,000 commits across the web, API, report and SMS services. Releases moved through GitLab with manual promotion gates, rolling updates and automatic rollback. API and report services had integration test suites. In the final year we added Prometheus, Grafana and Loki monitoring with business-level alerts, such as a rising NID-verification rejection rate, sent to the team’s chat.</p>
+    </section>
+    <section class="wide">
+      <h2>Outcomes</h2>
+      <figure class="dia">
+      <div class="dia__frame">
+        <svg viewBox="0 0 960 150" role="img" aria-label="Bar chart: approval time fell from 14 days to 24 hours"><text class="t-head" x="20" y="30">Time to approve a licence</text><text class="t-soft" x="20" y="72">Before</text><rect class="bar-a" x="100" y="56" width="784" height="24" rx="3"/><text x="894" y="74">14 days</text><text class="t-soft" x="20" y="122">After</text><rect class="bar-b" x="100" y="106" width="56" height="24" rx="3"/><text x="166" y="124">24 hours</text></svg>
+      </div>
+      <figcaption>Bars are drawn to scale: 336 hours against 24.</figcaption>
+    </figure>
+      <dl class="outcomes"><div><dt>800k+</dt><dd>agents managed</dd></div><div><dt>3-step</dt><dd>review, verify, approve at IDRA</dd></div><div><dt>Best Innovation</dt><dd>Project award</dd></div></dl>
+    </section>
+  </div>
+  <nav class="next" aria-label="More case studies">
+    <a href="internet-banking.html">Previous: Digital banking platform</a>
+    <a href="customs-agents.html">Next: Customs Agent Management</a>
+  </nav>
+</main>
+<script src="../assets/site.js"></script>
+</body>
+</html>
