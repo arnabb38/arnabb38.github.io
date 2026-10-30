@@ -41,3 +41,35 @@
     if (el) obs.observe(el);
   });
 })();
+
+// Contact form: posts to FormSubmit, which emails the message to me.
+(function () {
+  var form = document.querySelector("[data-contact-form]");
+  if (!form || !window.fetch) return;
+  var status = form.querySelector(".status");
+  var btn = form.querySelector("button[type=submit]");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (form._honey.value) return;
+    btn.disabled = true;
+    status.className = "status";
+    status.textContent = "Sending…";
+    fetch(form.action.replace("formsubmit.co/", "formsubmit.co/ajax/"), {
+      method: "POST",
+      headers: { "Accept": "application/json" },
+      body: new FormData(form)
+    }).then(function (r) { return r.json().then(function (d) { return r.ok && String(d.success) === "true"; }); })
+      .then(function (ok) {
+        if (!ok) throw new Error("send failed");
+        form.reset();
+        status.className = "status ok";
+        status.textContent = "Thanks, your message is on its way.";
+      })
+      .catch(function () {
+        status.className = "status err";
+        status.innerHTML = 'That didn’t go through. Please email <a href="mailto:arnabbasak896@gmail.com">arnabbasak896@gmail.com</a>.';
+      })
+      .then(function () { btn.disabled = false; });
+  });
+})();
