@@ -6,7 +6,9 @@
   function apply(theme) {
     root.setAttribute("data-theme", theme);
     if (btn) {
-      btn.textContent = theme === "dark" ? "Light theme" : "Dark theme";
+      var label = theme === "dark" ? "Switch to light theme" : "Switch to dark theme";
+      btn.setAttribute("aria-label", label);
+      btn.setAttribute("title", label);
       btn.setAttribute("aria-pressed", theme === "light" ? "true" : "false");
     }
   }

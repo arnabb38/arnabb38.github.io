@@ -99,7 +99,13 @@ p { margin: 0 0 1em; }
 .ident__role { font-size: 20px; color: var(--text); margin: 10px 0 14px; font-weight: 500; }
 .ident__line { color: var(--text-soft); max-width: 34ch; }
 
-.ident nav { margin-top: 36px; }
+.ident__contact { list-style: none; padding: 0; margin: 22px 0 0; display: grid; gap: 8px; font-size: 14.5px; color: var(--text-soft); }
+.ident__contact li { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.ident__contact svg { width: 16px; height: 16px; flex: none; fill: none; stroke: var(--text-faint); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.ident__contact a { color: var(--text-soft); text-decoration: none; overflow-wrap: anywhere; }
+.ident__contact a:hover { color: var(--text); text-decoration: underline; }
+
+.ident nav { margin-top: 28px; }
 .ident nav ol { list-style: none; padding: 0; margin: 0; }
 .ident nav a {
   display: flex; align-items: center; gap: 14px;
@@ -134,12 +140,15 @@ p { margin: 0 0 1em; }
   background: none;
   border: 1px solid var(--rule-strong);
   color: var(--text-soft);
-  border-radius: 4px;
-  padding: 6px 10px;
-  font: inherit;
-  font-size: 14px;
+  border-radius: 50%;
+  width: 36px; height: 36px;
+  padding: 0;
+  display: inline-flex; align-items: center; justify-content: center;
   cursor: pointer;
 }
+.theme svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+:root[data-theme="dark"] .theme .i-moon,
+:root[data-theme="light"] .theme .i-sun { display: none; }
 .theme:hover { color: var(--text); border-color: var(--text-soft); }
 
 main.content { padding: 72px 0 96px; min-width: 0; }
