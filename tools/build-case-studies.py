@@ -440,7 +440,7 @@ def uv():
     <h1>UniVerge ICX billing</h1>
     <p class="lede">Rebuilding a telecom interconnect billing system: the call-record pipeline on a legacy Java River framework, plus a new web application and API, now kept running 24/7 under an annual maintenance contract with a team I lead.</p>
   </header>
-  {facts([("Domain", "Telecom interconnect billing"), ("My role", "Rebuild lead, now sustain lead"), ("Scale", "3,000,000+ session detail records a day"), ("Stack", "Java, River framework, Node.js, Angular 16, Oracle, ZooKeeper")])}
+  {facts([("Domain", "Telecom interconnect billing"), ("My role", "Rebuild lead, now sustain lead"), ("Scale", "16M+ session detail records a day, about 5,000 a second"), ("Stack", "Java, River framework, Node.js, Angular 16, Oracle, ZooKeeper")])}
   <div class="cs-body">
     <section>
       <h2>The problem</h2>
@@ -457,7 +457,7 @@ def uv():
         <li><strong>Billing operations:</strong> domestic, international incoming and international outgoing invoices with an approval step, scheduling and regeneration, plus re-rating for disputed or failed records.</li>
         <li><strong>Reporting:</strong> regulator reports, call volume by partner and route, completion ratios and dashboards for incoming and outgoing traffic.</li>
         <li><strong>Operability:</strong> live statistics and pause, resume and reload controls from the browser, and a watchdog that restarts the engine on known failure patterns.</li>
-        <li><strong>The pipeline:</strong> rebuilt call-record processing on the River framework to parse 3,000,000+ session detail records a day with accurate billing, including a new switch’s record format and country-wise pulse rating.</li>
+        <li><strong>The pipeline:</strong> rebuilt call-record processing on the River framework to parse 16M+ session detail records a day at about 5,000 records a second with accurate billing, including a new switch’s record format and country-wise pulse rating.</li>
         <li><strong>The hardware:</strong> specified and configured the high-availability servers it runs on.</li>
         <li><strong>One codebase, two operators:</strong> client profiles let the same build serve two interconnect operators.</li>
       </ul>
@@ -468,7 +468,7 @@ def uv():
     </section>
     <section class="wide">
       <h2>Outcomes</h2>
-      {outcomes([("3M+", "session detail records a day"), ("3", "invoice types with approval"), ("2", "operators on one codebase"), ("24/7", "operation, now under AMC")])}
+      {outcomes([("16M+", "session detail records a day"), ("3", "invoice types with approval"), ("2", "operators on one codebase"), ("24/7", "operation, now under AMC")])}
     </section>
   </div>"""
     return page("universe-billing", "UniVerge ICX billing",
