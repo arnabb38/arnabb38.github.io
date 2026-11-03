@@ -34,7 +34,7 @@
     <h1>UniVerge ICX billing</h1>
     <p class="lede">Rebuilding a telecom interconnect billing system: the call-record pipeline on a legacy Java River framework, plus a new web application and API, now kept running 24/7 under an annual maintenance contract with a team I lead.</p>
   </header>
-  <dl class="facts"><div><dt>Domain</dt><dd>Telecom interconnect billing</dd></div><div><dt>My role</dt><dd>Rebuild lead, now sustain lead</dd></div><div><dt>Scale</dt><dd>985 files a cycle, 3.5 GB of records a day</dd></div><div><dt>Stack</dt><dd>Java, River framework, Node.js, Angular 16, Oracle, ZooKeeper</dd></div></dl>
+  <dl class="facts"><div><dt>Domain</dt><dd>Telecom interconnect billing</dd></div><div><dt>My role</dt><dd>Rebuild lead, now sustain lead</dd></div><div><dt>Scale</dt><dd>3,000,000+ session detail records a day</dd></div><div><dt>Stack</dt><dd>Java, River framework, Node.js, Angular 16, Oracle, ZooKeeper</dd></div></dl>
   <div class="cs-body">
     <section>
       <h2>The problem</h2>
@@ -56,7 +56,7 @@
         <li><strong>Billing operations:</strong> domestic, international incoming and international outgoing invoices with an approval step, scheduling and regeneration, plus re-rating for disputed or failed records.</li>
         <li><strong>Reporting:</strong> regulator reports, call volume by partner and route, completion ratios and dashboards for incoming and outgoing traffic.</li>
         <li><strong>Operability:</strong> live statistics and pause, resume and reload controls from the browser, and a watchdog that restarts the engine on known failure patterns.</li>
-        <li><strong>The pipeline:</strong> rebuilt call-record processing on the River framework to parse 985 files a cycle, each carrying 30,000+ session records of 390 fields, about 3.5 GB a day, including a new switch’s record format and country-wise pulse rating.</li>
+        <li><strong>The pipeline:</strong> rebuilt call-record processing on the River framework to parse 3,000,000+ session detail records a day with accurate billing, including a new switch’s record format and country-wise pulse rating.</li>
         <li><strong>The hardware:</strong> specified and configured the high-availability servers it runs on: 96 cores, 256 GB of RAM and 18 TB of SSD storage.</li>
         <li><strong>One codebase, two operators:</strong> client profiles let the same build serve two interconnect operators.</li>
       </ul>
@@ -67,7 +67,7 @@
     </section>
     <section class="wide">
       <h2>Outcomes</h2>
-      <dl class="outcomes"><div><dt>985</dt><dd>files parsed per cycle</dd></div><div><dt>3.5 GB</dt><dd>of call records a day</dd></div><div><dt>30k+</dt><dd>session records per file</dd></div><div><dt>3</dt><dd>invoice types with approval</dd></div><div><dt>2</dt><dd>operators on one codebase</dd></div><div><dt>24/7</dt><dd>operation, now under AMC</dd></div></dl>
+      <dl class="outcomes"><div><dt>3M+</dt><dd>session detail records a day</dd></div><div><dt>3</dt><dd>invoice types with approval</dd></div><div><dt>2</dt><dd>operators on one codebase</dd></div><div><dt>24/7</dt><dd>operation, now under AMC</dd></div></dl>
     </section>
   </div>
   <nav class="next" aria-label="More case studies">

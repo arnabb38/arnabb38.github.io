@@ -214,7 +214,7 @@ def ib():
     </section>
     <section>
       <h2>How we delivered</h2>
-      <p>We run Scrum and plan sprints at an 80% velocity factor against roughly 85% realised capacity, leaving room for production support and regulatory change. The backlog uses feature IDs, a definition of ready, T-shirt sizing and a flag for whether test cases are written. Every feature moves through the same stages: sprint, QA, UAT, production. Compliance requirements, from Bangladesh Bank’s ICT security guidelines to the applicable PCI-DSS controls and PII protection, are written into each PRD’s definition of done and checked before release. Every feature shipped so far went live on time, within scope and within budget.</p>
+      <p>We run Scrum and plan sprints at an 80% velocity factor against roughly 85% realised capacity, leaving room for production support and regulatory change. The backlog uses a definition of ready, T-shirt sizing and a flag for whether test cases are written. Every feature moves through the same stages: sprint, QA, UAT, production. Compliance requirements, from Bangladesh Bank’s ICT security guidelines to the applicable PCI-DSS controls and PII protection, are written into each PRD’s definition of done and checked before release. Every feature shipped so far went live on time, within scope and within budget.</p>
       <p>Each service ships through a GitLab pipeline that builds, deploys, health-checks and rolls back automatically if the check fails, with SonarQube on the way. Web journeys are tested with Cypress and the mobile app with Appium and WebdriverIO; the app alone has hundreds of automated tests. Standard releases take fifteen minutes, down from an hour. Releases that need downtime are agreed with the bank in advance and announced to customers.</p>
     </section>
     <section class="wide">
@@ -440,7 +440,7 @@ def uv():
     <h1>UniVerge ICX billing</h1>
     <p class="lede">Rebuilding a telecom interconnect billing system: the call-record pipeline on a legacy Java River framework, plus a new web application and API, now kept running 24/7 under an annual maintenance contract with a team I lead.</p>
   </header>
-  {facts([("Domain", "Telecom interconnect billing"), ("My role", "Rebuild lead, now sustain lead"), ("Scale", "985 files a cycle, 3.5 GB of records a day"), ("Stack", "Java, River framework, Node.js, Angular 16, Oracle, ZooKeeper")])}
+  {facts([("Domain", "Telecom interconnect billing"), ("My role", "Rebuild lead, now sustain lead"), ("Scale", "3,000,000+ session detail records a day"), ("Stack", "Java, River framework, Node.js, Angular 16, Oracle, ZooKeeper")])}
   <div class="cs-body">
     <section>
       <h2>The problem</h2>
@@ -457,7 +457,7 @@ def uv():
         <li><strong>Billing operations:</strong> domestic, international incoming and international outgoing invoices with an approval step, scheduling and regeneration, plus re-rating for disputed or failed records.</li>
         <li><strong>Reporting:</strong> regulator reports, call volume by partner and route, completion ratios and dashboards for incoming and outgoing traffic.</li>
         <li><strong>Operability:</strong> live statistics and pause, resume and reload controls from the browser, and a watchdog that restarts the engine on known failure patterns.</li>
-        <li><strong>The pipeline:</strong> rebuilt call-record processing on the River framework to parse 985 files a cycle, each carrying 30,000+ session records of 390 fields, about 3.5 GB a day, including a new switch’s record format and country-wise pulse rating.</li>
+        <li><strong>The pipeline:</strong> rebuilt call-record processing on the River framework to parse 3,000,000+ session detail records a day with accurate billing, including a new switch’s record format and country-wise pulse rating.</li>
         <li><strong>The hardware:</strong> specified and configured the high-availability servers it runs on: 96 cores, 256 GB of RAM and 18 TB of SSD storage.</li>
         <li><strong>One codebase, two operators:</strong> client profiles let the same build serve two interconnect operators.</li>
       </ul>
@@ -468,7 +468,7 @@ def uv():
     </section>
     <section class="wide">
       <h2>Outcomes</h2>
-      {outcomes([("985", "files parsed per cycle"), ("3.5 GB", "of call records a day"), ("30k+", "session records per file"), ("3", "invoice types with approval"), ("2", "operators on one codebase"), ("24/7", "operation, now under AMC")])}
+      {outcomes([("3M+", "session detail records a day"), ("3", "invoice types with approval"), ("2", "operators on one codebase"), ("24/7", "operation, now under AMC")])}
     </section>
   </div>"""
     return page("universe-billing", "UniVerge ICX billing",
