@@ -188,7 +188,7 @@ def ib():
         <li><strong>Move money:</strong> own-account and in-bank transfers, other banks over BEFTN and NPSB, bKash and Nagad wallets, and Bangla QR, including QR-to-QR transfer and QR cash withdrawal.</li>
         <li><strong>Pay:</strong> mobile recharge on all five operators, credit card bills, tuition and school fees, loan repayments, and online purchases with external merchants through the bank’s payment gateway.</li>
         <li><strong>Recurring:</strong> Standing Instructions for scheme instalments and fixed-amount transfers, for all of the bank’s customers.</li>
-        <li><strong>Corporate:</strong> 500+ institutional customers on corporate banking, including bulk disbursement of payments from one instruction.</li>
+        <li><strong>Corporate:</strong> 630+ institutional customers on corporate banking, including bulk disbursement of payments from one instruction.</li>
         <li><strong>Manage:</strong> statements and downloads, beneficiaries, device changes, disputes, and a chatbot. Accounts open through self-service eKYC or with help from a branch.</li>
         <li><strong>EduPay:</strong> students register with their university, pay fees through ShurjoPay or the bank’s own gateway, and download receipts.</li>
       </ul>
@@ -199,11 +199,11 @@ def ib():
         <li><strong>Product.</strong> I own the roadmap and a contracted scope of about 150 features, along with the requirements, PRDs and backlog, and the relationship with the bank.</li>
         <li><strong>Payments.</strong> I led the integration with Bangla QR, Bangladesh Bank’s national interoperable QR scheme, as well as the BEFTN and NPSB rails, the bKash and Nagad wallets and the SSLCommerz and ShurjoPay gateways. We also opened the bank’s own online payment to external parties, and SSLCommerz integrated it into its net banking section.</li>
         <li><strong>Standing Instructions.</strong> I led the requirements, design and on-time delivery of Standing Instructions for every customer of the bank, across all branches and not only internet banking users. Recurring deductions, such as scheme instalments and fixed-amount transfers, now run on their own.</li>
-        <li><strong>Growth beyond retail.</strong> I led the extension into corporate banking, now live for 500+ institutional customers with bulk disbursement, and into institutional fee collection.</li>
+        <li><strong>Growth beyond retail.</strong> I led the extension into corporate banking, now live for 630+ institutional customers with bulk disbursement, and into institutional fee collection.</li>
         <li><strong>UK expansion.</strong> I led the platform’s UK expansion project, running meetings and requirement gathering with UK stakeholders to understand the market and its needs.</li>
         <li><strong>Reporting and budget.</strong> Stakeholders and our Managing Director get a daily update: what happened, the impact, what is being done, who owns the next action and when it will be resolved. On top of that there is an automated business-status email and a weekly project and product report. I control headcount and licences, and agree infrastructure spend with the teams involved.</li>
         <li><strong>Hands-on.</strong> I maintain the project’s cloud infrastructure and VMs, set up the Prometheus, Grafana and Alertmanager monitoring myself, so the team hears about unusual behaviour before customers do, and I tuned PostgreSQL: its configuration, the slowest queries and its security settings.</li>
-        <li><strong>Team.</strong> 16 direct reports. I hired 10+ of them, and I own performance reviews and headcount.</li>
+        <li><strong>Team.</strong> A 20-person team across backend, frontend, mobile, QA, DBA, support and DevOps, working with the SRE, call centre and operations teams. I hired 10+ engineers, and I own performance reviews and headcount.</li>
         <li><strong>How we work.</strong> Scrum with backlog refinement every two sprints, and an agentic SDLC I introduced for the team and my own PM work: AI coding agents for codebase analysis, code review and delivery documents, with human review before anything ships.</li>
       </ul>
     </section>
@@ -214,12 +214,12 @@ def ib():
     </section>
     <section>
       <h2>How we delivered</h2>
-      <p>We run Scrum and plan sprints at an 80% velocity factor against roughly 85% realised capacity, leaving room for production support and regulatory change. The backlog uses a definition of ready, T-shirt sizing and a flag for whether test cases are written. Every feature moves through the same stages: sprint, QA, UAT, production. Compliance requirements, from Bangladesh Bank’s ICT security guidelines to the applicable PCI-DSS controls and PII protection, are written into each PRD’s definition of done and checked before release. Every feature shipped so far went live on time, within scope and within budget.</p>
-      <p>Each service ships through a GitLab pipeline that builds, deploys, health-checks and rolls back automatically if the check fails, with SonarQube on the way. Web journeys are tested with Cypress and the mobile app with Appium and WebdriverIO; the app alone has hundreds of automated tests. Standard releases take fifteen minutes, down from an hour. Releases that need downtime are agreed with the bank in advance and announced to customers.</p>
+      <p>We run Scrum and plan sprints at about 80% of team capacity, leaving room for production support and regulatory change. The backlog uses a definition of ready, sizing and a flag for whether test cases are written. Every feature moves through the same stages: sprint, QA, UAT, production. Compliance requirements, from Bangladesh Bank’s ICT security guidelines to the applicable PCI-DSS controls and PII protection, are written into each PRD’s definition of done and checked before release. Every feature shipped so far went live on time, within scope and within budget.</p>
+      <p>Each service ships through a GitLab pipeline that builds, deploys, health-checks and rolls back automatically if the check fails, with SonarQube on the way. No deployment goes ahead without a SAST scan and a QA report. Web journeys are tested with Cypress and the mobile app with Appium and WebdriverIO; the app alone has hundreds of automated tests. Standard releases take fifteen minutes, down from an hour. Releases that need downtime are agreed with the bank in advance and announced to customers.</p>
     </section>
     <section class="wide">
       <h2>Outcomes</h2>
-      {outcomes([("640k+", "retail customers"), ("17k+", "eKYC registrations a month"), ("15 min", "standard release, down from 1 hour"), ("90%", "automated test coverage"), ("500+", "corporate banking customers"), ("1,500+", "branch and back-office users")])}
+      {outcomes([("670k+", "retail customers"), ("17k+", "eKYC registrations a month"), ("15 min", "standard release, down from 1 hour"), ("90%", "automated test coverage"), ("630+", "corporate banking customers"), ("2,700+", "branch users and staff")])}
     </section>
   </div>"""
     return page("internet-banking", "Digital banking platform",
@@ -272,9 +272,9 @@ def alo():
     body = f"""  <header>
     <p class="client">Insurance Development and Regulatory Authority · 2021 to 2026</p>
     <h1>Agent Licensing Online</h1>
-    <p class="lede">The national platform that recruits, trains and licenses insurance agents in Bangladesh, built to the 2021 agent regulations and run until the contract completed in June 2026.</p>
+    <p class="lede">The national platform that recruits, trains and licenses insurance agents in Bangladesh, built to the 2021 agent regulations and run until the contract completed and the platform was handed over.</p>
   </header>
-  {facts([("Client", "IDRA, the insurance regulator"), ("My role", "Requirements, architecture and delivery lead"), ("Scale", "800,000+ agents, 83 insurers, 8 training institutes"), ("Stack", "Node.js, Angular, PostgreSQL, Spring Batch, JasperReports")])}
+  {facts([("Client", "IDRA, the insurance regulator"), ("My role", "Requirements, architecture and delivery lead"), ("Scale", "1.1M+ agents, 83 insurers, 7 training institutes"), ("Stack", "Node.js, Angular, PostgreSQL, Spring Batch, JasperReports")])}
   <div class="cs-body">
     <section>
       <h2>The problem</h2>
@@ -310,7 +310,7 @@ def alo():
     <section class="wide">
       <h2>Outcomes</h2>
       {d2}
-      {outcomes([("800k+", "agents managed"), ("3-step", "review, verify, approve at IDRA"), ("Best Innovation", "Project award")])}
+      {outcomes([("1.1M+", "agents managed"), ("3-step", "review, verify, approve at IDRA"), ("Best Innovation", "award for digitalisation")])}
     </section>
   </div>"""
     return page("agent-licensing", "Agent Licensing Online",
@@ -365,7 +365,7 @@ def cams():
     <h1>Customs Agent Management System</h1>
     <p class="lede">One national register for customs agent licences in Bangladesh: C&amp;F agents, freight forwarders and shipping agents, their owners and representatives, from application to cancellation.</p>
   </header>
-  {facts([("Client", "National Board of Revenue"), ("My role", "End-to-end delivery lead"), ("Scale", "300,000+ customs agents, 19 customs offices"), ("Stack", "Node.js, Hapi, Angular, PostgreSQL, JasperReports; ASYCUDA World")])}
+  {facts([("Client", "National Board of Revenue"), ("My role", "End-to-end delivery lead"), ("Scale", "800,000+ customs agents, 19 customs offices"), ("Stack", "Node.js, Hapi, Angular, PostgreSQL, JasperReports; ASYCUDA World")])}
   <div class="cs-body">
     <section>
       <h2>The problem</h2>
@@ -401,7 +401,7 @@ def cams():
     </section>
     <section class="wide">
       <h2>Outcomes</h2>
-      {outcomes([("300k+", "customs agents on one register"), ("19", "custom houses and commissionerates"), ("90%", "less manual processing time")])}
+      {outcomes([("800k+", "customs agents on one register"), ("19", "custom houses and commissionerates"), ("90%", "less manual processing time")])}
     </section>
   </div>"""
     return page("customs-agents", "Customs Agent Management System",
