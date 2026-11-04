@@ -270,9 +270,9 @@ def alo():
     d2 = fig(s, "0 0 960 150", "Bars are drawn to scale: 336 hours against 24.", "Bar chart: approval time fell from 14 days to 24 hours")
 
     body = f"""  <header>
-    <p class="client">Insurance Development and Regulatory Authority · 2021 to 2026</p>
+    <p class="client">Insurance Development and Regulatory Authority · 2021 to present</p>
     <h1>Agent Licensing Online</h1>
-    <p class="lede">The national platform that recruits, trains and licenses insurance agents in Bangladesh, built to the 2021 agent regulations and run until the contract completed and the platform was handed over.</p>
+    <p class="lede">The national platform that recruits, trains and licenses insurance agents in Bangladesh, built to the 2021 agent regulations and live ever since.</p>
   </header>
   {facts([("Client", "IDRA, the insurance regulator"), ("My role", "Requirements, architecture and delivery lead"), ("Scale", "1.1M+ agents, 83 insurers, 7 training institutes"), ("Stack", "Node.js, Angular, PostgreSQL, Spring Batch, JasperReports")])}
   <div class="cs-body">
@@ -298,7 +298,7 @@ def alo():
     <section>
       <h2>My part</h2>
       <ul>
-        <li>Turned the regulation into requirements and acceptance criteria with IDRA, and owned that relationship from first build to completion.</li>
+        <li>Turned the regulation into requirements and acceptance criteria with IDRA, and have owned that relationship since the first build.</li>
         <li>Led the architecture and delivery: a bilingual Bangla and English web app, an API, a report service for licences and certificates, and an SMS service with per-insurer sender names.</li>
         <li>Coordinated the rollout across insurance companies and training institutes, each with different levels of digital readiness.</li>
       </ul>
